@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-0": {
-            "JonnyW\\PhantomJs\\": "src"
+            "PixelTools\\PhantomJs\\": "src"
         },
 		"classmap": ["src/"]
     },
