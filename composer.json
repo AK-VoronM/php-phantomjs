@@ -1,14 +1,14 @@
 {
-    "name": "jonnyw/php-phantomjs",
+    "name": "pixeltools/php-phantomjs",
     "description": "A PHP wrapper for loading pages through PhantomJS",
     "keywords": ["PhantomJS", "Testing", "Headless Browser"],
 	"type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jonny Wenmoth",
-            "email": "contact@jonnyw.me",
-            "homepage": "http://jonnyw.me/"
+            "name": "Pixel Tools",
+            "email": "support@pixeltools.tu",
+            "homepage": "https://tools.pixelplus.ru"
         }
     ],
     "minimum-stability": "stable",

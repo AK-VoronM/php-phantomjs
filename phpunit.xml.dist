@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <phpunit 
-    bootstrap                   = "./src/JonnyW/PhantomJs/Tests/bootstrap.php" 
+    bootstrap                   = "./src/PixelTools/PhantomJs/Tests/bootstrap.php"
     backupGlobals               = "false"
     backupStaticAttributes      = "false"
     colors                      = "true"
@@ -13,14 +13,14 @@
     syntaxCheck                 = "false">
     <testsuites>
         <testsuite name="PhantomJS Test Suite">
-            <directory suffix="Test.php">./src/JonnyW/PhantomJs/Tests/*</directory>
+            <directory suffix="Test.php">./src/PixelTools/PhantomJs/Tests/*</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory suffix=".php">./src/</directory>
             <exclude>
-                <directory>./src/JonnyW/PhantomJs/Tests</directory>
+                <directory>./src/PixelTools/PhantomJs/Tests</directory>
             </exclude>
         </whitelist>
     </filter>

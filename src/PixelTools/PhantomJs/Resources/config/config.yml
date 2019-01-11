@@ -1,0 +1,62 @@
+parameters:
+
+#############################
+### CONFIGURATION OPTIONS ###
+#############################
+
+    phantomjs.cache_dir: /tmp
+    phantomjs.procedure_dir: "%phantomjs.resource_dir%/procedures"
+    phantomjs.procedure_extension: proc
+    phantomjs.validator_dir: "%phantomjs.resource_dir%/validators"
+    phantomjs.validator_engine: "esprima-2.0.0.js"
+
+##############
+### ENGINE ###
+##############
+
+    phantomjs.engine.class: PixelTools\PhantomJs\Engine
+
+##################
+### PROCEDURES ###
+##################
+
+    phantomjs.procedure.procedure_loader.class: PixelTools\PhantomJs\Procedure\ProcedureLoader
+    phantomjs.procedure.chain_loader.class: PixelTools\PhantomJs\Procedure\ChainProcedureLoader
+    phantomjs.procedure.procedure_factory.class: PixelTools\PhantomJs\Procedure\ProcedureFactory
+    phantomjs.procedure.procedure_loader_factory.class: PixelTools\PhantomJs\Procedure\ProcedureLoaderFactory
+    phantomjs.procedure.procedure_validator.class: PixelTools\PhantomJs\Procedure\ProcedureValidator
+    phantomjs.procedure.procedure_compiler.class: PixelTools\PhantomJs\Procedure\ProcedureCompiler
+
+############
+### HTTP ###
+############
+
+    phantomjs.http.message_factory.class: PixelTools\PhantomJs\Http\MessageFactory
+
+################
+### PARSING ####
+################
+
+    phantomjs.parser.json_parser.class: PixelTools\PhantomJs\Parser\JsonParser
+
+###################
+### VALIDATION ####
+###################
+
+    phantomjs.validator.esprima.class: PixelTools\PhantomJs\Validator\Esprima
+
+##################
+### TEMPLATES ####
+##################
+
+    phantomjs.template.template_renderer.class: PixelTools\PhantomJs\Template\TemplateRenderer
+    phantomjs.twig.environment.class: Twig_Environment
+    phantomjs.twig.lexer.class: Twig_Lexer
+    phantomjs.twig.array_loader.class: Twig_Loader_Array
+
+##################
+### RESOURCES ####
+##################
+
+    phantomjs.cache.file_cache.class: PixelTools\PhantomJs\Cache\FileCache
+    phantomjs.loader.file_locator.class: Symfony\Component\Config\FileLocator
