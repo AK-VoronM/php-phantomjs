@@ -50,6 +50,13 @@ class Engine
     protected $options;
 
     /**
+     * PhantomJs system command need for additional system params
+     *
+     * @var string
+     */
+    protected $system_cmd = "timeout -k 30s 25s";
+
+    /**
      * Log info
      *
      * @var string
@@ -83,6 +90,7 @@ class Engine
     {
         $path    = $this->getPath();
         $options = $this->getOptions();
+        $sys_cmd = $this->getSystemCMD();
 
         $this->validateExecutable($path);
 
@@ -94,7 +102,32 @@ class Engine
             array_push($options, '--debug=true');
         }
 
-        return sprintf('%s %s', $path, implode(' ', $options));
+        if (trim($sys_cmd)) {
+            $r = sprintf('%s %s %s', $sys_cmd, $path, implode(' ', $options));
+        } else {
+            $r = sprintf('%s %s', $path, implode(' ', $options));
+        }
+        return $r;
+    }
+
+    /**
+     * Set system CMD
+     *
+     * @param string $string
+     */
+    public function setSystemCMD($string)
+    {
+        $this->system_cmd = $string;
+    }
+
+    /**
+     * return system CMD
+     *
+     * @return string
+     */
+    public function getSystemCMD()
+    {
+        return $this->system_cmd;
     }
 
     /**
