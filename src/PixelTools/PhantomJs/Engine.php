@@ -102,7 +102,12 @@ class Engine
             array_push($options, '--debug=true');
         }
 
-        return $r = sprintf('%s %s', $path, implode(' ', $options));;
+        if (trim($sys_cmd)) {
+            $r = sprintf('%s %s %s', $sys_cmd, $path, implode(' ', $options));
+        } else {
+            $r = sprintf('%s %s', $path, implode(' ', $options));
+        }
+        return $r;
     }
 
     /**
